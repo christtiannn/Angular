@@ -1,0 +1,16 @@
+<h1>
+  Buscador
+</h1>
+
+<form>
+  <input type="text" name="query" [(ngModel)]="query" placeholder="{{placeHolder}}" />
+  <input type="submit" value="{{labelButton}}" (click)=search() />
+  <p>
+    Parametro de busqueda: {{query}}
+  </p>
+  <p>
+    Resultado: {{result}}
+  </p>
+
+</form>
+<app-list-owner></app-list-owner>
