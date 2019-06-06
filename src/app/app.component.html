@@ -6,9 +6,17 @@
 <form>
   <input type = "text" name="query" [(ngModel)]="query"/>
   <p>Parametro de busqueda: {{query}}</p> 
-</form>-->
+</form>
 <app-search [labelButton]="labelBuscar" [placeHolder]="labelPlaceHolder" (eventoBuscar)="search($event)"></app-search>
 <p>
   {{eventMsg}}
-</p>
+</p>-->
+<ul>
+  <li><a routerLink="/" routerLinkActive="active">Welcome</a></li>
+  <li><a routerLink="/owners" routerLinkActive="active">owners</a></li>
+  <li><a routerLink="/search" routerLinkActive="active">search</a></li>
+  <li><a routerLink='/owners-add' routerLinkActive="active"> Add Owner</a></li>
+</ul>
+
+
 <router-outlet></router-outlet>

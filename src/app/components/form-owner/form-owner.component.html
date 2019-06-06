@@ -1,0 +1,51 @@
+<h1>New Owner</h1>
+<form class="form-horizontal" #ownerForm="ngForm" (ngSubmit)="onSubmit(ownerForm.value)">
+  <fieldset>
+    <legend>Owner information:</legend>
+    <div class=form-group>
+      <label for="firstName">First Name: <br></label>
+      <input type="text" class="form-control" required [(ngModel)]="owner.firstName" name="firstName"
+        #firstName="ngModel">
+    </div>
+    <div [hidden]="firstName.valid || firstName.pristine" class="alert alert-danger">
+      First Name Required
+    </div>
+    <div class=form-group>
+      <label for="lastName">Last Name: <br></label>
+      <input type="text" class="form-control" required [(ngModel)]="owner.lastName" name="lastName" #lastName="ngModel">
+    </div>
+    <div [hidden]="lastName.valid || lastName.pristine" class="alert alert-danger">
+      Last Name Required
+    </div>
+    <div class=form-group>
+      <label for="address">Address: <br></label>
+      <input type="text" class="form-control" required [(ngModel)]="owner.address" name="address" #address="ngModel">
+    </div>
+    <div [hidden]="address.valid || address.pristine" class="alert alert-danger">
+      Address Required
+    </div>
+    <div class=form-group>
+      <label for="city">City: <br></label>
+      <input type="text" class="form-control" required [(ngModel)]="owner.city" name="city" #city="ngModel">
+    </div>
+    <div [hidden]="city.valid || city.pristine" class="alert alert-danger">
+      City Required
+    </div>
+    <div class=form-group>
+      <label for="telephone">Telephone: <br></label>
+      <input type="text" class="form-control" required [(ngModel)]="owner.telephone" name="telephone"
+        #telephone="ngModel">
+      <div [hidden]="telephone.valid || telephone.pristine" class="alert alert-danger">
+        Telephone Required
+      </div>
+    </div>
+    <br>
+    <div class=form-group>
+      <div class="col-sm-ofset-2 col-sm-10">
+        <button class="btn btn-default" type="submit" [disabled]="!ownerForm.valid">Sign In</button>
+      </div>
+
+    </div>
+
+  </fieldset>
+</form>

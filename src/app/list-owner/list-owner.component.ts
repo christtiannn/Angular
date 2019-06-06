@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { OwnerService } from '../owner/owner.service';
+import { Owner } from '../models/owner';
 
 @Component({
   selector: 'app-list-owner',
@@ -9,7 +10,7 @@ import { OwnerService } from '../owner/owner.service';
 
 export class ListOwnerComponent implements OnInit {
 
-  public owners;
+  public owners: Array<Owner>;
   constructor(private ownerService: OwnerService) { }
 
   ngOnInit() {
